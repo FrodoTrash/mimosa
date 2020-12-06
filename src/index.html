@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mimosa</title>
+    <meta http-equiv="Content-Security-Policy"/>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    <!-- jQuerry -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/3.1.1/jquery.serializejson.min.js "></script> -->
+    <script src="functions.js"></script>
+  </head>
+  <body>
+    <table class="uk-table uk-table-justify uk-table-divider">
+      <thead>
+          <tr>
+            <th class="uk-width-small">service</th>
+            <th>username</th>
+            <th>email</th>
+            <th>password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <script>
+          makeTable() 
+        </script>
+      </tbody>
+  </table>
+
+  <div class="uk-container uk-container-center">
+    <div class='uk-position-bottom uk-overlay uk-text-center uk-heading-line'>
+        <a class='lobby-text-small uk-button' href='#modal-insert' uk-toggle>ADD</a>
+    </div>
+  </div>
+
+
+
+  <div id="modal-insert" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+    <div class="uk-modal-header">
+        <h2 class="uk-modal-title lobby-text">New Account</h2>
+    </div>
+    
+    <div class="uk-modal-body uk-text-center">    
+      <form action="#" id="form-insert" onsubmit="return newEntry(this)"> 
+        <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                    <input class="uk-input" type="text" name="service" placeholder="service">
+                </div>
+        </div>
+
+        <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                    <input class="uk-input" type="text" name="username" placeholder="username">
+                </div>
+        </div>
+
+        <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                    <input class="uk-input" type="email" name="email" placeholder="email">
+                </div>
+        </div>
+
+        <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon uk-form-icon" uk-icon="icon: lock"></span>
+                    <input class="uk-input" type="password" name="password" placeholder="password">
+                </div>
+        </div>
+
+        <div class="uk-modal-footer uk-text-center">
+          <input class="uk-button lobby-button" type="submit" id="insertform" value="Submit"></input><br><br>
+        </div>                                                              
+      </form>
+    </div>
+    </div>
+  </div>
+
+  </body>
+</html>
